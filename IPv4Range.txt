@@ -1,4 +1,4 @@
 #!/bin/bash
 
 curl https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20230821.json | \
-  jq -r '.values[] | select( .name == "AzureCloud.eastus2" ) | .properties.addressPrefixes | join(",")'
+  jq -r '.values[] | select( .name == "AzureCloud" ) | .properties.addressPrefixes | join(",")'
